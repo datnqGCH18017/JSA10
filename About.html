@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            background-color: #13613b;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #13613b;
+            padding: 0px 10px;
+            height: 40px;
+        }
+
+        .nav a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: x-large;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.25s;
+        }
+
+        .nav a:hover {
+            color: #a90000;
+            transform: scale(1.4);
+        }
+
+        .About-img {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .About1 {
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .About2 {
+            display: flex;
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            font-size: 80px;
+            font-weight: 700;
+            width: 750px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            background-color: black;
+        }
+
+        .section {
+            width: 250px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            height: 400px;
+            margin: 20px;
+            background-color: rgb(253, 248, 241);
+            border-radius: 1cm;
+            margin-top: 150px;
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .section:hover{
+            transform: scale(1.2);
+        }
+
+        .Text-1 {
+            display: flex;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 400px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: whitesmoke;
+            font-size: 40px;
+        }
+
+        .Text-1-color {
+            background-color: black;
+        }
+
+        .Text-size {
+            /* font-size: large; */
+            font-weight: 400;
+            -webkit-text-stroke: 0.25px white;
+            margin-top: 10px;
+        }
+
+        .Fast-facts {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .Facts {
+            position: absolute;
+            left: 300px;
+            width: 900px;
+            height: 200px;
+            background-color: rgb(255, 234, 95);
+            transform: rotate(-2.75deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 1850px;
+        }
+
+        .Fact-in {
+            margin: 10px;
+        }
+
+        .Text-2 {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(171, 65, 65);
+            background-color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Facts-color {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .Facts-in4 {
+            display: flex;
+
+            font-size: x-large;
+            font-weight: 700;
+            text-wrap: balance;
+            padding-left: 70px;
+        }
+
+        .Information {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .Information-con {
+            display: flex;
+            justify-content: center;
+            width: 1300px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            -webkit-text-stroke: 0.25px white;
+        }
+
+        .Information-bo {
+            margin-top: 350px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        .container-2 {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo"
+            src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/stencil/cfc8cb20-f80c-013b-70e4-46a5d7f544e7/e/9b61c020-dbc4-013b-e5e4-32d1efe13875/img/branding/christmas-logo.svg?2023-11-25T00:00:00+00:00"
+            width="20%">
+    </div>
+    <div class="nav"> <a href="/Test.html">Home</a>
+        <a href="">About</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+    </div>
+    <div class="About-img">
+        <img style="width: 100%;background-color: black;"
+            src="https://www.tipsyelves.com/cdn/shop/files/Page-Banner-About-Us-01_1.png?v=1651186649&width=2000"
+            alt="">
+        <div class="About1">About</div>
+        <div class="About2">We're here to help all families discover the joy of everyday life.</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="Text-1-color">
+            <p class="Text-1">Explore more about the website!</p>
+        </div>
+        <div></div>
+        <div class="section"> <!-- First Section -->
+            <img style="height: 70px;margin: 10px;" src="https://cdn-icons-png.flaticon.com/128/1324/1324667.png"
+                alt="">
+            <h2>Purpose & History</h2>
+            <p class="Text-size">Who we are today is rooted in our company history and the vision of our founders. Learn
+                more, and meet the leadership team who is driving Target into the future.</p>
+        </div>
+        <div class="section"> <!-- Second Section -->
+            <img style="height: 70px;margin: 10px;" src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="">
+            <h2>Our Locations</h2>
+            <p class="Text-size">Learn more about the nearly 2,000 stores we operate, plus our supply chain facilities
+                and headquarters locations.</p>
+        </div>
+        <div class="section"> <!-- Third Section -->
+            <img style="height: 70px;margin: 10px;" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png"
+                alt="">
+            <h2>Products & Services</h2>
+            <p class="Text-size">From our exclusive only-at-Target offerings to the national brands our guests expect,
+                you can shop Target in stores, online or delivered to your home.</p>
+        </div>
+        <div class="section"> <!-- Fourth Section -->
+            <img style="height: 70px;margin: 10px;" src="https://cdn-icons-png.flaticon.com/128/9581/9581138.png"
+                alt="">
+            <h2>Contact & Help</h2>
+            <p class="Text-size">Your one-stop-shop for key contact information for our corporate teams and guest
+                services.</p>
+        </div>
+    </div>
+    <div class="Fast-facts">
+        <div class="Text-2">
+            <p>The Manifesto</p>
+        </div>
+        <div class="Information">
+            <div class="Information-con">
+                <p>At this website our mission is simple: We make the most outrageous clothes known to mankind in order
+                    to make your life more fun. Sounds like a big undertaking, but we've been doing it one legendary
+                    collection at a time. Along the way we've reinvented ugly Christmas sweaters, launched a patriotic
+                    collection that Honest Abe would honestly love, and engineered ski suits so bright the sun won't
+                    stare directly at them.</p>
+            </div>
+
+        </div>
+        <div class="Information">
+            <div style="margin-top: 20px;" class="Information-con">
+                <p>We know what you're thinking - sign me up! Well not so fast buckaroo. The thing is, we're not for
+                    everyone. If you relish in the monotony of the 9 to 5, enjoying the occasional water cooler
+                    chit-chat and over-posting your life "milestones" on Facebook (no one cares you bought a third cat
+                    Jeff) - then we're not for you.</p>
+            </div>
+        </div>
+        <div class="Facts-color">
+            <div class="Facts">
+                <p class="Facts-in4">At Holiday.com our mission is simple: We make the most outrageous clothes known to
+                    mankind in order to make your life more fun.</p>
+            </div>
+
+        </div>
+        <div class="Information-bo">
+            <div class="Information">
+                <div style="margin-top: 20px;" class="Information-con">
+                    <p>If however, life hands you lemons and you make Fireball shots, if your weekends live for you, and
+                        if you routinely show life what it feels like to be dominated - then welcome home Roscoe. Take a
+                        seat. We've been waiting for you.</p>
+                </div>
+            </div>
+            <div class="Information">
+                <div style="margin-top: 20px;" class="Information-con">
+                    <p>Tipsy Elves is here to outfit you for whatever gathering or occasion life may throw your way.
+                        Need to show your neighbors what a true patriot looks like on Independence Day? That's what our
+                        Americana collection is for. Looking to score some digits at the annual holiday ball? We've got
+                        an ugly Christmas sweater for that. Want to teach the snow a lesson on what snow-blindness feels
+                        like? Check out our eye-melting collection of neon ski suits.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 200px;" class="Information">
+                <div style="margin-top: 20px;" class="Information-con">
+                    <p>You see friend, we know you've got a life to live. And our clothing has your back. You just keep
+                        making every day a glory day, and we'll do the rest.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container-2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">our services</a></li>
+                        <li><a href="">privacy policy</a></li>
+                        <li><a href="">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">shipping</a></li>
+                        <li><a href="">returns</a></li>
+                        <li><a href="">order status</a></li>
+                        <li><a href="">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="">watch</a></li>
+                        <li><a href="">bag</a></li>
+                        <li><a href="">shoes</a></li>
+                        <li><a href="">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="About.js"></script>
+
+</body>
+
+</html>

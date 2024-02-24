@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Product Detail Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .body1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #339966;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180vh;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            background-color: #13613b;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #13613b;
+            padding: 0px 20px;
+            height: 40px;
+        }
+
+        .nav a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: x-large;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.25s;
+        }
+
+        .nav a:hover {
+            color: #a90000;
+            transform: scale(1.4);
+        }
+
+        .container {
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #c62828;
+            margin-bottom: 10px;
+        }
+
+        .product-image {
+            width: 65%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-description {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #c62828;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #872423;
+        }
+
+        .sale {
+            background-color: red;
+            color: white;
+            display: inline;
+            justify-content: center;
+            width: auto;
+        }
+
+        .price {
+            color: rgb(122, 0, 0);
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+        .ul1{
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo"
+            src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/stencil/cfc8cb20-f80c-013b-70e4-46a5d7f544e7/e/9b61c020-dbc4-013b-e5e4-32d1efe13875/img/branding/christmas-logo.svg?2023-11-25T00:00:00+00:00"
+            width="20%">
+    </div>
+    <div class="nav"> <a href="/Test.html">Home</a>
+        <a href="/About.html">About</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+    </div>
+    <div class="body1">
+        <div class="container">
+
+            <div class="product-info">
+                <h1 style="width: 700px;">Northlight Set of 3 Lighted Snowman Family Outdoor Christmas Decoration</h1>
+
+                <img class="product-image"
+                    src="https://target.scene7.com/is/image/Target/GUEST_5b9bc529-6c4c-484b-8184-3341e4c7207a?wid=1200&hei=1200&qlt=80&fmt=webp"
+                    width="10%" alt="Product Image">
+                <div>
+                    <h2>Price: <p><s>1.972.000₫ </s></p>
+                        <p class="price">1.232.000₫</p>
+                        <p class="sale"> SAVE 38%</p>
+                    </h2>
+                </div>
+                <div class="product-description">
+                    <h3>Product Description:</h3>
+                    <p>No holiday is complete without snowmen, making this family is a must have this season. Decked out in their winter hat and scarves, this happy threesome steals the show. Pre-lit with warm white lights, they offer the perfect holiday glow. Super easy assembly makes holiday decorating a breeze.</p>
+                </div>
+
+                <div>
+                    <h3>Specifications:</h3>
+                    <ul class="ul1">
+                        <li>Set Of 3 Snowman Family Outdoor Christmas Decoration</li>
+                        <li>Can Be Displayed Separately Or Grouped Together</li>
+                        <li>Large Measures 39.50 Inches High By 16.75 Inches Wide By 9 Inches Deep</li>
+                    </ul>
+                </div>
+                <button>🛒 Add to Cart 🎁</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #3B7257; */
+            background: linear-gradient(to bottom, #339966 0%, #000000 60%);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            background-color: #13613b;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #13613b;
+            padding: 0px 20px;
+            height: 40px;
+        }
+
+        .nav a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: x-large;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.25s;
+        }
+
+        .nav a:hover {
+            color: #a90000;
+            transform: scale(1.4);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+        }
+
+        .product {
+            width: 30%;
+            padding: 10px;
+            /* border: 3px solid #9a0000; */
+            text-align: center;
+            background-color: #ffffff;
+            transition: all 0.5s;
+        }
+        .product:hover{
+            transform: scale(1.2);
+        }
+
+        .product img {
+            width: 80%;
+            height: auto;
+            /* color: black;
+            list-style: none; */
+        }
+
+        .Text-1 {
+            display: flex;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: rgb(0, 0, 0);
+        }
+
+        .product-2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .Line {
+            border-top: 2px solid black;
+            width: 50%;
+            height: 10px;
+        }
+
+        .Line-2 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .Text-2 {
+            display: flex;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+        }
+
+        .Tao-la-bo-may {
+            display: flex;
+            justify-content: end;
+        }
+
+        .sale {
+            background-color: red;
+            color: white;
+            display: inline-block;
+            justify-content: center;
+            width: auto;
+        }
+
+        .price {
+            color: rgb(122, 0, 0);
+        }
+
+        .hover:hover {
+            color: rgb(0, 74, 37);
+        }
+
+        .Text-3 {
+            color: black;
+            text-decoration: none;
+        }
+
+        .img-2 {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        .container-2 {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+            left: 30px;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        canvas {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img class="logo"
+            src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/stencil/cfc8cb20-f80c-013b-70e4-46a5d7f544e7/e/9b61c020-dbc4-013b-e5e4-32d1efe13875/img/branding/christmas-logo.svg?2023-11-25T00:00:00+00:00"
+            width="20%">
+    </div>
+    <div class="nav"> <a href="">Home</a>
+        <a href="/About.html">About</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+    </div>
+    <div>
+        <img src="/Green And White Illustrative Merry Christmas Banner Landscape.png" width="100%" alt="">
+    </div>
+    <div class="Line-2">
+        <div class="Line"></div>
+    </div>
+    <div class="Text-1">
+        <p style="color: #FFDE59; font-weight: 700;">ACCESSORIES</p>
+    </div>
+    <div class="Tao-la-bo-may">
+        <div class="container">
+            <div class="product">
+                <a href="Clothes copy 5.html"><img
+                        src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/images/stencil/640w/products/24436146/22382113/northlight_h93956_1__16789.1.jpg"
+                        alt="Product 2"></a>
+                <a class="Text-3" href="Clothes copy 5.html">
+                    <h5  style="font-weight: 600;" class="hover">Northlight Set of 3 Lighted Snowman Family Outdoor Christmas Decoration</h5>
+                </a>
+                <p><s>1.972.000₫ </s></p>
+                <p class="price">1.232.000₫</p>
+                <p class="sale"> SAVE 38%</p>
+            </div>
+            <div class="product">
+                <a href="Clothes copy 3.html"><img
+                        src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/images/stencil/640w/products/186110/19447284/northlight_tr04002_mainupdated__35698.1.jpg"
+                        alt="Product 2"></a>
+                <a class="Text-3" href="Clothes copy 3.html">
+                    <h5 style="font-weight: 600;" class="hover">Buffalo Flat Chicken Wing Glass Christmas Ornament</h5>
+                </a>
+                <p><s>1.379.000₫ </s></p>
+                <p class="price">551.000₫</p>
+                <p class="sale"> SAVE 38%</p>
+            </div>
+            <div class="product">
+                <a href="Clothes copy 4.html"><img
+                        src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/images/stencil/640w/products/343304/685758/northlight_j65066__95162.1.jpg"
+                        alt="Product 2"></a>
+                <a class="Text-3" href="Clothes copy 4.html">
+                    <h5  style="font-weight: 600;" class="hover">Artificial Christmas Tree with Snowflakes</h5>
+                </a>
+                <p><s>1.972.000₫ </s></p>
+                <p class="price">1.232.000₫</p>
+                <p class="sale"> SAVE 38%</p>
+            </div>
+        </div>
+    </div>
+    <div class="Line-2">
+        <div class="Line"></div>
+    </div>
+    <div class="Text-2">
+        <p style="color: #FFDE59; font-weight: 700;">CLOTHINGS</p>
+    </div>
+    <div class="container">
+        <div class="product">
+            <a href="Clothes copy.html"><img
+                    src="https://www.tipsyelves.com/cdn/shop/files/TE-CJMP128_M_Ho_Ho_Ho_Jumpsuit_025.jpg?v=1700940058&width=2000"
+                    alt="Product 2"></a>
+            <a class="Text-3" href="/Clothes copy.html">
+                <h5  style="font-weight: 600;" class="hover">MEN'S HO HO HO JUMPSUIT</h5>
+            </a>
+            <p><s>1.972.000₫ </s></p>
+            <p class="price">1.232.000₫</p>
+            <p class="sale"> SAVE 38%</p>
+        </div>
+        <div class="product">
+            <a href="Clothes.html"><img
+                    src="https://www.tipsyelves.com/cdn/shop/files/mens-blue-reindeer-jumpsuit-01.jpg?v=1700334290&width=2000"
+                    alt="Product 2"></a>
+            <a class="Text-3" href="Clothes.html">
+                <h5  style="font-weight: 600;" class="hover">MEN'S BLUE REINDEER JUMPSUIT</h5>
+            </a>
+            <p><s>1.972.000₫ </s></p>
+            <p class="price">1.232.000₫</p>
+            <p class="sale"> SAVE 38%</p>
+        </div>
+        <div class="product">
+            <a href="Clothes copy 2.html"><img
+                    src="https://www.tipsyelves.com/cdn/shop/products/Mens-santa-jumpsuit-with-fur-01-1.jpg?v=1659065697&width=2000"
+                    alt="Product 2"></a>
+            <a class="Text-3" href="Clothes copy 2.html">
+                <h5  style="font-weight: 600;" class="hover">MEN'S SANTA JUMPSUIT WITH FUR</h5>
+            </a>
+            <p><s>1.972.000₫ </s></p>
+            <p class="price">1.232.000₫</p>
+            <p class="sale"> SAVE 38%</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div>
+        <img class="img-2" src="/Black Gold Modern Christmas Sale Facebook Ad (1).png">
+    </div>
+    <div class="Line-2">
+        <div class="Line"></div>
+
+    </div>
+    <!-- animation -->
+    
+
+    
+    <!-- SPECIAL SALES -->
+    <div class="Text-2">
+        <p style="
+        /** TEXT GRADIENT */ color: #ffc107; background-image: -webkit-linear-gradient(0deg, #ffc107 0%, #ff5722 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        
+      ; font-weight: 700;font-size: 150px;">SPECIAL SALES</p>
+    </div>
+    <div style="margin-bottom: 200px;" class="Tao-la-bo-may">
+        <div class="container">
+            <div class="product" style="background: linear-gradient(to top right, #fddb97 0%, #764b3e 100%);">
+                <a href="Clothes.html"><img
+                        src="https://assets.wfcdn.com/im/27097794/resize-h500-w500%5Ecompr-r85/2591/259150917/Metal+Astrology+%26+Stars+Tree+Topper.jpg"
+                        style="width: 100%;" alt="Product 2"></a>
+                <a class="Text-3" href="Clothes.html">
+                    <h5  style="font-weight: 600;" class="hover">Metal Astrology & Stars Tree Topper</h5>
+                </a>
+                <p><s>3.000.000₫ </s></p>
+                <p class="price">1.200.000₫</p>
+                <p class="sale"> SAVE 60%</p>
+            </div>
+            <div class="product" style=" background: linear-gradient(to right, #fddb97 0%, #764b3e 100%);">
+                <a href="Clothes.html"><img
+                        src="https://assets.wfcdn.com/im/84594717/resize-h500-w500%5Ecompr-r85/1619/161901635/Arctic+Holiday+Shaped+Ornament.jpg"
+                        style="width: 100%;" alt="Product 2"></a>
+                <a class="Text-3" href="Clothes.html">
+                    <h5 style="font-weight: 600;" class="hover">Christmas Tree Decorations Ornament Balls With Hooks & String Hanging</h5>
+                </a>
+                <p><s>1.379.000₫ </s></p>
+                <p class="price">551.000₫</p>
+                <p class="sale"> SAVE 38%</p>
+            </div>
+            <div class="product" style="background: linear-gradient(to bottom, #fddb97 0%, #764b3e 100%);">
+                <a href="Clothes.html"><img
+                        src="https://m.media-amazon.com/images/I/71CC6NEgE6L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                        style="width: 100%;" alt="Product 2"></a>
+                <a class="Text-3" href="Clothes.html">
+                    <h5  style="font-weight: 600;" class="hover">Philips Hue Indoor/Outdoor Christmas 130-Foot Festavia String Lights </h5>
+                </a>
+                <p><s>1.972.000₫ </s></p>
+                <p class="price">1.232.000₫</p>
+                <p class="sale"> SAVE 38%</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">our services</a></li>
+                        <li><a href="">privacy policy</a></li>
+                        <li><a href="">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">shipping</a></li>
+                        <li><a href="">returns</a></li>
+                        <li><a href="">order status</a></li>
+                        <li><a href="">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="">clothings</a></li>
+                        <li><a href="">accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="left: -2px;">follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

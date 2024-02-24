@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Product Detail Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .body1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #339966;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180vh;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            background-color: #13613b;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #13613b;
+            padding: 0px 20px;
+            height: 40px;
+        }
+
+        .nav a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: x-large;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.25s;
+        }
+
+        .nav a:hover {
+            color: #a90000;
+            transform: scale(1.4);
+        }
+
+        .container {
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #c62828;
+            margin-bottom: 10px;
+        }
+
+        .product-image {
+            width: 65%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-description {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #c62828;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #872423;
+        }
+
+        .sale {
+            background-color: red;
+            color: white;
+            display: inline;
+            justify-content: center;
+            width: auto;
+        }
+
+        .price {
+            color: rgb(122, 0, 0);
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+
+        .ul1 {
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo"
+            src="https://cdn11.bigcommerce.com/s-cjnf1slqyn/stencil/cfc8cb20-f80c-013b-70e4-46a5d7f544e7/e/9b61c020-dbc4-013b-e5e4-32d1efe13875/img/branding/christmas-logo.svg?2023-11-25T00:00:00+00:00"
+            width="20%">
+    </div>
+    <div class="nav"> <a href="/Test.html">Home</a>
+        <a href="/About.html">About</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+    </div>
+    <div class="body1">
+        <div class="container">
+
+            <div class="product-info">
+                <h1 style="width: 700px;">🎄MEN'S BLUE REINDEER JUMPSUIT🎄</h1>
+
+                <img class="product-image"
+                    src="https://www.tipsyelves.com/cdn/shop/products/Mens-santa-jumpsuit-with-fur-01-1.jpg?v=1659065697&width=2000"
+                    width="10%" alt="Product Image">
+                <div>
+                    <h2>Price: <p><s>1.972.000₫ </s></p>
+                        <p class="price">1.232.000₫</p>
+                        <p class="sale"> SAVE 38%</p>
+                    </h2>
+                </div>
+                <div class="product-description">
+                    <h3>Product Description:</h3>
+                    <p>Featuring faux fur around the Santa-shaped hood as well as down the center front to the belt and
+                        at the cuffs, this Men's Santa Jumpsuit will have you looking your Ho- Ho- Holiday best in a
+                        jiffy. And no, it doesn't come with a big fat pack full of toys, but feel free to load up your
+                        laundry bag and do your best. (It was just a thought.) And make sure to pick up matching
+                        jumpsuits for everyone in the family!</p>
+                </div>
+
+                <div>
+                    <h3>Specifications:</h3>
+                    <ul class="ul1">
+                        <li>MACHINE WASH COLD, ONLY NON-CHLORINE BLEACH WHEN NEEDED, HANG DRY, COOL IRON ON REVERSE SIDE
+                            OR DRY CLEAN</li>
+                        <li>100% POLYESTER (FLEECE)</li>
+                        <li>	MODEL IS 5'11", WAIST 31", WEARING SIZE MEDIUM</li>
+                    </ul>
+                </div>
+                <button>🛒 Add to Cart 🎁</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
