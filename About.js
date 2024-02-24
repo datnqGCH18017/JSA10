@@ -4,3 +4,4 @@ const flexContainer = document.querySelector('.flex-container')
 flexContainer.addEventListener('mousemove', function (e) {
     section.map(i => i.style.opacity = 100);
 })
+console.log("Hello");
